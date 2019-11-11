@@ -18,7 +18,7 @@ steps:
   displayName: 'Docker tag'
 
 - script: |
-    docker login -u $(dockerId) -p $(pswd)
+    docker login -u $(dockerId) -p $(dockerPwd)
     docker push $(imageName)
     docker push $(repoName):latest
   displayName: 'Push docker image'
